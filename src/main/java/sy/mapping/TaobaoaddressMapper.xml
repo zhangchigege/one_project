@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.TaobaoaddressMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.Taobaoaddress" >
+    <id column="tid" property="tid" jdbcType="VARCHAR" />
+    <result column="tbid" property="tbid" jdbcType="VARCHAR" />
+    <result column="consignee" property="consignee" jdbcType="VARCHAR" />
+    <result column="areaname" property="areaname" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="zip" property="zip" jdbcType="VARCHAR" />
+    <result column="phonenumber" property="phonenumber" jdbcType="VARCHAR" />
+    <result column="loaddate" property="loaddate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tid, tbid, consignee, areaname, address, zip, phonenumber, loaddate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_taobaoaddress
+    where tid = #{tid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_taobaoaddress
+    where tid = #{tid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.Taobaoaddress" >
+    insert into tb_taobaoaddress (tid, tbid, consignee, 
+      areaname, address, zip, 
+      phonenumber, loaddate)
+    values (#{tid,jdbcType=VARCHAR}, #{tbid,jdbcType=VARCHAR}, #{consignee,jdbcType=VARCHAR}, 
+      #{areaname,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{zip,jdbcType=VARCHAR}, 
+      #{phonenumber,jdbcType=VARCHAR}, #{loaddate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.Taobaoaddress" >
+    insert into tb_taobaoaddress
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tid != null" >
+        tid,
+      </if>
+      <if test="tbid != null" >
+        tbid,
+      </if>
+      <if test="consignee != null" >
+        consignee,
+      </if>
+      <if test="areaname != null" >
+        areaname,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="zip != null" >
+        zip,
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber,
+      </if>
+      <if test="loaddate != null" >
+        loaddate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tid != null" >
+        #{tid,jdbcType=VARCHAR},
+      </if>
+      <if test="tbid != null" >
+        #{tbid,jdbcType=VARCHAR},
+      </if>
+      <if test="consignee != null" >
+        #{consignee,jdbcType=VARCHAR},
+      </if>
+      <if test="areaname != null" >
+        #{areaname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null" >
+        #{zip,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.Taobaoaddress" >
+    update tb_taobaoaddress
+    <set >
+      <if test="tbid != null" >
+        tbid = #{tbid,jdbcType=VARCHAR},
+      </if>
+      <if test="consignee != null" >
+        consignee = #{consignee,jdbcType=VARCHAR},
+      </if>
+      <if test="areaname != null" >
+        areaname = #{areaname,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="zip != null" >
+        zip = #{zip,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        loaddate = #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where tid = #{tid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.Taobaoaddress" >
+    update tb_taobaoaddress
+    set tbid = #{tbid,jdbcType=VARCHAR},
+      consignee = #{consignee,jdbcType=VARCHAR},
+      areaname = #{areaname,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      zip = #{zip,jdbcType=VARCHAR},
+      phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      loaddate = #{loaddate,jdbcType=TIMESTAMP}
+    where tid = #{tid,jdbcType=VARCHAR}
+  </update>
+  <select id="selecttbAddressBytbid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_taobaoaddress
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </select>
+</mapper>

@@ -1,0 +1,39 @@
+
+ssquid:S1450J"URemove the "reader" field and declare it as a local variable in the relevant methods.(ú§Âµ8ºÚçå›-
+xsquid:S2293Ñ"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ„•÷8ºÚçå›-
+Gsquid:S1148ú"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+dsquid:S2147ý"ECombine this catch with the one at line 247, which has the same body.(¶ø««8ºÚçå›-
+osquid:CommentedOutCodeLine†"<This block of commented-out lines of code should be removed.(¡Í¨üÿÿÿÿÿ8ºÚçå›-
+qsquid:S00117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÈäÒ8ºÚçå›-
+Gsquid:S1148þ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+vsquid:S00117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëç°¤ýÿÿÿÿ8ºÚçå›-
+isquid:S2147ù"ECombine this catch with the one at line 247, which has the same body.(‡¤“Óûÿÿÿÿ8ºÚçå›-
+Msquid:S2093`"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ºÚçå›-
+\
+squid:S106°"9Replace this use of System.out or System.err by a logger.(ÝÁÉÊøÿÿÿÿ8ºÚçå›-
+dsquid:S2147û"ECombine this catch with the one at line 247, which has the same body.(ï­£Ä8ºÚçå›-
+Gsquid:S1148¹"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+ssquid:S3008T"URename this field "j_username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÛœÄ8ºÚçå›-
+|squid:S2293c"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆÓö¸ÿÿÿÿÿ8ºÚçå›-
+jsquid:CommentedOutCodeLineÉ"<This block of commented-out lines of code should be removed.(Ê†Šç8ºÚçå›-
+xsquid:S3008U"URename this field "j_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢×Îýþÿÿÿÿ8ºÚçå›-
+»%squid:RedundantThrowsDeclarationCheckç"}Remove the declaration of thrown exception 'java.io.UnsupportedEncodingException', as it cannot be thrown from method's body.(Ë÷±úûÿÿÿÿ8ºÚçå›-
+vsquid:S00117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀˆÞ¯ýÿÿÿÿ8ºÚçå›-
+Gsquid:S1148Û"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+Gsquid:S1148ø"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+Gsquid:S1148´"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+Gsquid:S1148ü"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ºÚçå›-
+lsquid:S3027›"HPut single-quotes around 'ï¼š' to use the faster "indexOf(char)" method.(šÞÎ‡ýÿÿÿÿ8ºÚçå›-
+ssquid:S1450K"URemove the "strMap" field and declare it as a local variable in the relevant methods.(ÌÍö±8ºÚçå›-
+[
+squid:S106y"9Replace this use of System.out or System.err by a logger.(÷×È­ýÿÿÿÿ8ºÚçå›-
+zsquid:S1450H"WRemove the "response" field and declare it as a local variable in the relevant methods.(¤ÓµÉùÿÿÿÿ8ºÚçå›-
+\
+squid:S106Ù"9Replace this use of System.out or System.err by a logger.(Žò«Ëùÿÿÿÿ8ºÚçå›-
+vsquid:S00117ž"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê²ÞÌÿÿÿÿÿ8ºÚçå›-
+lsquid:S001012"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(—¹¼è8ºÚçå›-
+isquid:S4488Å"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(÷šùô8ºÚçå›-
+esquid:HiddenFieldCheckq"<Rename "response" which hides the field declared at line 72.(³‚Üç8ºÚçå›-
+W
+squid:S106ö"9Replace this use of System.out or System.err by a logger.(¦¥Õ«8ºÚçå›-
+jsquid:CommentedOutCodeLine–"<This block of commented-out lines of code should be removed.(¢åŸª8ºÚçå›-

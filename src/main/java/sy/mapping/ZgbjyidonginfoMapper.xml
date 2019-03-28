@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.ZgbjyidonginfoMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.Zgbjyidonginfo" >
+    <id column="ydid" property="ydid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="birthDate" property="birthdate" jdbcType="VARCHAR" />
+    <result column="idtype" property="idtype" jdbcType="VARCHAR" />
+    <result column="idnumber" property="idnumber" jdbcType="VARCHAR" />
+    <result column="phonenumber" property="phonenumber" jdbcType="VARCHAR" />
+    <result column="accountbalance" property="accountbalance" jdbcType="VARCHAR" />
+    <result column="netage" property="netage" jdbcType="VARCHAR" />
+    <result column="accesstime" property="accesstime" jdbcType="VARCHAR" />
+    <result column="nearlyonemonth" property="nearlyonemonth" jdbcType="VARCHAR" />
+    <result column="nearlyonetotalmoney" property="nearlyonetotalmoney" jdbcType="VARCHAR" />
+    <result column="nearlyonesetmealmoney" property="nearlyonesetmealmoney" jdbcType="VARCHAR" />
+    <result column="nearlytwomonth" property="nearlytwomonth" jdbcType="VARCHAR" />
+    <result column="nearlytwototalmoney" property="nearlytwototalmoney" jdbcType="VARCHAR" />
+    <result column="nearlytwosetmealmoney" property="nearlytwosetmealmoney" jdbcType="VARCHAR" />
+    <result column="nearlythreemonth" property="nearlythreemonth" jdbcType="VARCHAR" />
+    <result column="nearlythreetotalmoney" property="nearlythreetotalmoney" jdbcType="VARCHAR" />
+    <result column="nearlythreesetmealmoney" property="nearlythreesetmealmoney" jdbcType="VARCHAR" />
+    <result column="loaddate" property="loaddate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ydid, username, age, gender, birthDate, idtype, idnumber, phonenumber, accountbalance, 
+    netage, accesstime, nearlyonemonth, nearlyonetotalmoney, nearlyonesetmealmoney, nearlytwomonth, 
+    nearlytwototalmoney, nearlytwosetmealmoney, nearlythreemonth, nearlythreetotalmoney, 
+    nearlythreesetmealmoney, loaddate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_zgbjyidonginfo
+    where ydid = #{ydid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_zgbjyidonginfo
+    where ydid = #{ydid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.Zgbjyidonginfo" >
+    insert into tb_zgbjyidonginfo (ydid, username, age, 
+      gender, birthDate, idtype, 
+      idnumber, phonenumber, accountbalance, 
+      netage, accesstime, nearlyonemonth, 
+      nearlyonetotalmoney, nearlyonesetmealmoney, 
+      nearlytwomonth, nearlytwototalmoney, nearlytwosetmealmoney, 
+      nearlythreemonth, nearlythreetotalmoney, 
+      nearlythreesetmealmoney, loaddate)
+    values (#{ydid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{birthdate,jdbcType=VARCHAR}, #{idtype,jdbcType=VARCHAR}, 
+      #{idnumber,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, #{accountbalance,jdbcType=VARCHAR}, 
+      #{netage,jdbcType=VARCHAR}, #{accesstime,jdbcType=VARCHAR}, #{nearlyonemonth,jdbcType=VARCHAR}, 
+      #{nearlyonetotalmoney,jdbcType=VARCHAR}, #{nearlyonesetmealmoney,jdbcType=VARCHAR}, 
+      #{nearlytwomonth,jdbcType=VARCHAR}, #{nearlytwototalmoney,jdbcType=VARCHAR}, #{nearlytwosetmealmoney,jdbcType=VARCHAR}, 
+      #{nearlythreemonth,jdbcType=VARCHAR}, #{nearlythreetotalmoney,jdbcType=VARCHAR}, 
+      #{nearlythreesetmealmoney,jdbcType=VARCHAR}, #{loaddate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.Zgbjyidonginfo" >
+    insert into tb_zgbjyidonginfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ydid != null" >
+        ydid,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="birthdate != null" >
+        birthDate,
+      </if>
+      <if test="idtype != null" >
+        idtype,
+      </if>
+      <if test="idnumber != null" >
+        idnumber,
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber,
+      </if>
+      <if test="accountbalance != null" >
+        accountbalance,
+      </if>
+      <if test="netage != null" >
+        netage,
+      </if>
+      <if test="accesstime != null" >
+        accesstime,
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth,
+      </if>
+      <if test="nearlyonetotalmoney != null" >
+        nearlyonetotalmoney,
+      </if>
+      <if test="nearlyonesetmealmoney != null" >
+        nearlyonesetmealmoney,
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth,
+      </if>
+      <if test="nearlytwototalmoney != null" >
+        nearlytwototalmoney,
+      </if>
+      <if test="nearlytwosetmealmoney != null" >
+        nearlytwosetmealmoney,
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth,
+      </if>
+      <if test="nearlythreetotalmoney != null" >
+        nearlythreetotalmoney,
+      </if>
+      <if test="nearlythreesetmealmoney != null" >
+        nearlythreesetmealmoney,
+      </if>
+      <if test="loaddate != null" >
+        loaddate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ydid != null" >
+        #{ydid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="accountbalance != null" >
+        #{accountbalance,jdbcType=VARCHAR},
+      </if>
+      <if test="netage != null" >
+        #{netage,jdbcType=VARCHAR},
+      </if>
+      <if test="accesstime != null" >
+        #{accesstime,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonetotalmoney != null" >
+        #{nearlyonetotalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonesetmealmoney != null" >
+        #{nearlyonesetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwototalmoney != null" >
+        #{nearlytwototalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwosetmealmoney != null" >
+        #{nearlytwosetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreetotalmoney != null" >
+        #{nearlythreetotalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreesetmealmoney != null" >
+        #{nearlythreesetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.Zgbjyidonginfo" >
+    update tb_zgbjyidonginfo
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        birthDate = #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        idtype = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        idnumber = #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null" >
+        phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="accountbalance != null" >
+        accountbalance = #{accountbalance,jdbcType=VARCHAR},
+      </if>
+      <if test="netage != null" >
+        netage = #{netage,jdbcType=VARCHAR},
+      </if>
+      <if test="accesstime != null" >
+        accesstime = #{accesstime,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonetotalmoney != null" >
+        nearlyonetotalmoney = #{nearlyonetotalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonesetmealmoney != null" >
+        nearlyonesetmealmoney = #{nearlyonesetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwototalmoney != null" >
+        nearlytwototalmoney = #{nearlytwototalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwosetmealmoney != null" >
+        nearlytwosetmealmoney = #{nearlytwosetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreetotalmoney != null" >
+        nearlythreetotalmoney = #{nearlythreetotalmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreesetmealmoney != null" >
+        nearlythreesetmealmoney = #{nearlythreesetmealmoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        loaddate = #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ydid = #{ydid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.Zgbjyidonginfo" >
+    update tb_zgbjyidonginfo
+    set username = #{username,jdbcType=VARCHAR},
+      age = #{age,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      birthDate = #{birthdate,jdbcType=VARCHAR},
+      idtype = #{idtype,jdbcType=VARCHAR},
+      idnumber = #{idnumber,jdbcType=VARCHAR},
+      phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      accountbalance = #{accountbalance,jdbcType=VARCHAR},
+      netage = #{netage,jdbcType=VARCHAR},
+      accesstime = #{accesstime,jdbcType=VARCHAR},
+      nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      nearlyonetotalmoney = #{nearlyonetotalmoney,jdbcType=VARCHAR},
+      nearlyonesetmealmoney = #{nearlyonesetmealmoney,jdbcType=VARCHAR},
+      nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      nearlytwototalmoney = #{nearlytwototalmoney,jdbcType=VARCHAR},
+      nearlytwosetmealmoney = #{nearlytwosetmealmoney,jdbcType=VARCHAR},
+      nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      nearlythreetotalmoney = #{nearlythreetotalmoney,jdbcType=VARCHAR},
+      nearlythreesetmealmoney = #{nearlythreesetmealmoney,jdbcType=VARCHAR},
+      loaddate = #{loaddate,jdbcType=TIMESTAMP}
+    where ydid = #{ydid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByYdid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_zgbjyidonginfo
+    where ydid = #{ydid,jdbcType=VARCHAR}
+  </select>
+</mapper>

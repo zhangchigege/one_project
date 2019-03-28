@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.Social_Security_Query_Mapper" >
+  <resultMap id="BaseResultMap" type="sy.model.SbUser" >
+    <id column="uid" property="uid" jdbcType="VARCHAR" />
+    <result column="comPany_Name" property="comPany_Name" jdbcType="VARCHAR" />
+    <result column="unified_Social_Credit_Code" property="unified_Social_Credit_Code" jdbcType="VARCHAR" />
+    <result column="social_Security_Registration_Number" property="social_Security_Registration_Number" jdbcType="VARCHAR" />
+    <result column="county" property="county" jdbcType="VARCHAR" />
+    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="id_Number" property="id_Number" jdbcType="VARCHAR" />
+    <result column="date" property="date" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="nation" property="nation" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="VARCHAR" />
+    <result column="pin" property="pin" jdbcType="VARCHAR" />
+    <result column="date_Of_Employment" property="date_Of_Employment" jdbcType="VARCHAR" />
+    <result column="account_Properties" property="account_Properties" jdbcType="VARCHAR" />
+    <result column="registered_Permanent_Residence" property="registered_Permanent_Residence" jdbcType="VARCHAR" />
+    <result column="place_Of_Abode" property="place_Of_Abode" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="salary" property="salary" jdbcType="VARCHAR" />
+    <result column="bank_Account" property="bank_Account" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    uid, comPany_Name, unified_Social_Credit_Code, social_Security_Registration_Number, county, userName, id_Number, date, sex,nation,state,pin,date_Of_Employment,account_Properties,registered_Permanent_Residence,place_Of_Abode,phone,salary,bank_Account
+  </sql>
+ <!--  <select id="findBySBid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_sbuser
+    where uid = #{uid,jdbcType=VARCHAR}
+  </select> -->
+  <insert id="insert" parameterType="sy.model.SbUser" >
+    insert into tb_sbuser (uid, comPany_Name, unified_Social_Credit_Code, 
+      social_Security_Registration_Number, county, userName, id_Number,date,sex,nation,state,pin,date_Of_Employment,
+      account_Properties, registered_Permanent_Residence, place_Of_Abode,phone,salary,bank_Account
+      )
+    values (#{uid,jdbcType=VARCHAR},#{comPany_Name,jdbcType=VARCHAR},#{unified_Social_Credit_Code,jdbcType=VARCHAR},#{social_Security_Registration_Number,jdbcType=VARCHAR},#{county,jdbcType=VARCHAR},#{userName,jdbcType=VARCHAR}
+    ,#{id_Number,jdbcType=VARCHAR},#{date,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},#{nation,jdbcType=VARCHAR},#{state,jdbcType=VARCHAR},#{pin,jdbcType=VARCHAR},#{date_Of_Employment,jdbcType=VARCHAR},
+    #{account_Properties,jdbcType=VARCHAR},#{registered_Permanent_Residence,jdbcType=VARCHAR},#{place_Of_Abode,jdbcType=VARCHAR},
+    #{phone,jdbcType=VARCHAR},#{salary,jdbcType=VARCHAR},#{bank_Account,jdbcType=VARCHAR}
+      )
+  </insert>
+  <!-- <insert id="insertSelective" parameterType="sy.model.SbUser" >
+    insert into tb_appuserinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="uname != null" >
+        uname,
+      </if>
+      <if test="upwd != null" >
+        upwd,
+      </if>
+      <if test="realname != null" >
+        realname,
+      </if>
+      <if test="mobilephone != null" >
+        MOBILEPHONE,
+      </if>
+      <if test="idcard != null" >
+        idcard,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="loaddate != null" >
+        LOADDATE,
+      </if>
+      <if test="remake != null" >
+        remake,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uid != null" >
+        #{uid,jdbcType=VARCHAR},
+      </if>
+      <if test="uname != null" >
+        #{uname,jdbcType=VARCHAR},
+      </if>
+      <if test="upwd != null" >
+        #{upwd,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilephone != null" >
+        #{mobilephone,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remake != null" >
+        #{remake,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+ -->
+  <select id="findBySBid" resultMap="BaseResultMap" parameterType="java.lang.String" fetchSize="1000">
+    select 
+    <include refid="Base_Column_List" />
+    from tb_sbuser
+    where uid = #{uid,jdbcType=VARCHAR}
+  </select>
+</mapper>

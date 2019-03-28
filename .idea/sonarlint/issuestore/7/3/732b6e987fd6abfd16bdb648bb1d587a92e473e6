@@ -1,0 +1,6 @@
+
+tjavascript:S3699/"XRemove this use of the output from this function; this function doesn't return anything.(ˆè²Ô
+njavascript:S2589"MRefactor this code so that this expression does not always evaluate to false.(ò¹™©øÿÿÿÿ
+ijavascript:S2814¢"LRename "aftervalue" as this name is already used in declaration at line 140.(£ò°ƒ
+Bjavascript:S878*""Remove use of this comma operator.(×¢©Üşÿÿÿÿ
+|javascript:S2703"[Add the "let", "const" or "var" keyword to this declaration of "_init" to make it explicit.(…ÇŠÿÿÿÿÿ

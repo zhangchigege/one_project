@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.PerdishonestyMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.Perdishonesty" >
+    <id column="pid" property="pid" jdbcType="VARCHAR" />
+    <result column="pname" property="pname" jdbcType="VARCHAR" />
+    <result column="pnumber" property="pnumber" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CERTTYPE" property="certtype" jdbcType="VARCHAR" />
+    <result column="CERTNO" property="certno" jdbcType="VARCHAR" />
+    <result column="Age" property="age" jdbcType="VARCHAR" />
+    <result column="Gender" property="gender" jdbcType="VARCHAR" />
+    <result column="COURTCODE" property="courtcode" jdbcType="VARCHAR" />
+    <result column="COURTNAME" property="courtname" jdbcType="VARCHAR" />
+    <result column="CASENO" property="caseno" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="PARTYROLE" property="partyrole" jdbcType="VARCHAR" />
+    <result column="REGISTERDATE" property="registerdate" jdbcType="VARCHAR" />
+    <result column="ENFORCECASE" property="enforcecase" jdbcType="VARCHAR" />
+    <result column="ENFORCEFILENO" property="enforcefileno" jdbcType="VARCHAR" />
+    <result column="PROVINCENAME" property="provincename" jdbcType="VARCHAR" />
+    <result column="VALIDATEDATE" property="validatedate" jdbcType="DATE" />
+    <result column="ENFORCEORGNAME" property="enforceorgname" jdbcType="VARCHAR" />
+    <result column="LAWSUITOBJECT" property="lawsuitobject" jdbcType="VARCHAR" />
+    <result column="ENFORCEMONEY" property="enforcemoney" jdbcType="VARCHAR" />
+    <result column="ALREADYENFORCE" property="alreadyenforce" jdbcType="VARCHAR" />
+    <result column="ALREADYENFORCEMONEY" property="alreadyenforcemoney" jdbcType="VARCHAR" />
+    <result column="CASESTATE" property="casestate" jdbcType="VARCHAR" />
+    <result column="ALREADYENFORCECASE" property="alreadyenforcecase" jdbcType="VARCHAR" />
+    <result column="CLOSEDDATE" property="closeddate" jdbcType="DATE" />
+    <result column="ENFORCETYPE" property="enforcetype" jdbcType="VARCHAR" />
+    <result column="PUBLISHDATE" property="publishdate" jdbcType="VARCHAR" />
+    <result column="LOADDATE" property="loaddate" jdbcType="DATE" />
+    <result column="ORGNAME" property="orgname" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="sy.model.Perdishonesty" extends="BaseResultMap" >
+    <result column="CASEREASON" property="casereason" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pid, pname, pnumber, NAME, CERTTYPE, CERTNO, Age, Gender, COURTCODE, COURTNAME, CASENO, 
+    ADDRESS, PARTYROLE, REGISTERDATE, ENFORCECASE, ENFORCEFILENO, PROVINCENAME, VALIDATEDATE, 
+    ENFORCEORGNAME, LAWSUITOBJECT, ENFORCEMONEY, ALREADYENFORCE, ALREADYENFORCEMONEY, 
+    CASESTATE, ALREADYENFORCECASE, CLOSEDDATE, ENFORCETYPE, PUBLISHDATE, LOADDATE, ORGNAME
+  </sql>
+  <sql id="Blob_Column_List" >
+    CASEREASON
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from tb_per_dishonesty
+    where pid = #{pid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_per_dishonesty
+    where pid = #{pid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.Perdishonesty" >
+    insert into tb_per_dishonesty (pid, pname, pnumber, 
+      NAME, CERTTYPE, CERTNO, 
+      Age, Gender, COURTCODE, 
+      COURTNAME, CASENO, ADDRESS, 
+      PARTYROLE, REGISTERDATE, ENFORCECASE, 
+      ENFORCEFILENO, PROVINCENAME, VALIDATEDATE, 
+      ENFORCEORGNAME, LAWSUITOBJECT, ENFORCEMONEY, 
+      ALREADYENFORCE, ALREADYENFORCEMONEY, CASESTATE, 
+      ALREADYENFORCECASE, CLOSEDDATE, ENFORCETYPE, 
+      PUBLISHDATE, LOADDATE, ORGNAME, 
+      CASEREASON)
+    values (#{pid,jdbcType=VARCHAR}, #{pname,jdbcType=VARCHAR}, #{pnumber,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{certtype,jdbcType=VARCHAR}, #{certno,jdbcType=VARCHAR}, 
+      #{age,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{courtcode,jdbcType=VARCHAR}, 
+      #{courtname,jdbcType=VARCHAR}, #{caseno,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{partyrole,jdbcType=VARCHAR}, #{registerdate,jdbcType=VARCHAR}, #{enforcecase,jdbcType=VARCHAR}, 
+      #{enforcefileno,jdbcType=VARCHAR}, #{provincename,jdbcType=VARCHAR}, #{validatedate,jdbcType=DATE}, 
+      #{enforceorgname,jdbcType=VARCHAR}, #{lawsuitobject,jdbcType=VARCHAR}, #{enforcemoney,jdbcType=VARCHAR}, 
+      #{alreadyenforce,jdbcType=VARCHAR}, #{alreadyenforcemoney,jdbcType=VARCHAR}, #{casestate,jdbcType=VARCHAR}, 
+      #{alreadyenforcecase,jdbcType=VARCHAR}, #{closeddate,jdbcType=DATE}, #{enforcetype,jdbcType=VARCHAR}, 
+      #{publishdate,jdbcType=VARCHAR}, #{loaddate,jdbcType=DATE}, #{orgname,jdbcType=VARCHAR}, 
+      #{casereason,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.Perdishonesty" >
+    insert into tb_per_dishonesty
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="pname != null" >
+        pname,
+      </if>
+      <if test="pnumber != null" >
+        pnumber,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="certtype != null" >
+        CERTTYPE,
+      </if>
+      <if test="certno != null" >
+        CERTNO,
+      </if>
+      <if test="age != null" >
+        Age,
+      </if>
+      <if test="gender != null" >
+        Gender,
+      </if>
+      <if test="courtcode != null" >
+        COURTCODE,
+      </if>
+      <if test="courtname != null" >
+        COURTNAME,
+      </if>
+      <if test="caseno != null" >
+        CASENO,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="partyrole != null" >
+        PARTYROLE,
+      </if>
+      <if test="registerdate != null" >
+        REGISTERDATE,
+      </if>
+      <if test="enforcecase != null" >
+        ENFORCECASE,
+      </if>
+      <if test="enforcefileno != null" >
+        ENFORCEFILENO,
+      </if>
+      <if test="provincename != null" >
+        PROVINCENAME,
+      </if>
+      <if test="validatedate != null" >
+        VALIDATEDATE,
+      </if>
+      <if test="enforceorgname != null" >
+        ENFORCEORGNAME,
+      </if>
+      <if test="lawsuitobject != null" >
+        LAWSUITOBJECT,
+      </if>
+      <if test="enforcemoney != null" >
+        ENFORCEMONEY,
+      </if>
+      <if test="alreadyenforce != null" >
+        ALREADYENFORCE,
+      </if>
+      <if test="alreadyenforcemoney != null" >
+        ALREADYENFORCEMONEY,
+      </if>
+      <if test="casestate != null" >
+        CASESTATE,
+      </if>
+      <if test="alreadyenforcecase != null" >
+        ALREADYENFORCECASE,
+      </if>
+      <if test="closeddate != null" >
+        CLOSEDDATE,
+      </if>
+      <if test="enforcetype != null" >
+        ENFORCETYPE,
+      </if>
+      <if test="publishdate != null" >
+        PUBLISHDATE,
+      </if>
+      <if test="loaddate != null" >
+        LOADDATE,
+      </if>
+      <if test="orgname != null" >
+        ORGNAME,
+      </if>
+      <if test="casereason != null" >
+        CASEREASON,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="pid != null" >
+        #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="pname != null" >
+        #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="pnumber != null" >
+        #{pnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="certtype != null" >
+        #{certtype,jdbcType=VARCHAR},
+      </if>
+      <if test="certno != null" >
+        #{certno,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="courtcode != null" >
+        #{courtcode,jdbcType=VARCHAR},
+      </if>
+      <if test="courtname != null" >
+        #{courtname,jdbcType=VARCHAR},
+      </if>
+      <if test="caseno != null" >
+        #{caseno,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="partyrole != null" >
+        #{partyrole,jdbcType=VARCHAR},
+      </if>
+      <if test="registerdate != null" >
+        #{registerdate,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcecase != null" >
+        #{enforcecase,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcefileno != null" >
+        #{enforcefileno,jdbcType=VARCHAR},
+      </if>
+      <if test="provincename != null" >
+        #{provincename,jdbcType=VARCHAR},
+      </if>
+      <if test="validatedate != null" >
+        #{validatedate,jdbcType=DATE},
+      </if>
+      <if test="enforceorgname != null" >
+        #{enforceorgname,jdbcType=VARCHAR},
+      </if>
+      <if test="lawsuitobject != null" >
+        #{lawsuitobject,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcemoney != null" >
+        #{enforcemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforce != null" >
+        #{alreadyenforce,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforcemoney != null" >
+        #{alreadyenforcemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="casestate != null" >
+        #{casestate,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforcecase != null" >
+        #{alreadyenforcecase,jdbcType=VARCHAR},
+      </if>
+      <if test="closeddate != null" >
+        #{closeddate,jdbcType=DATE},
+      </if>
+      <if test="enforcetype != null" >
+        #{enforcetype,jdbcType=VARCHAR},
+      </if>
+      <if test="publishdate != null" >
+        #{publishdate,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=DATE},
+      </if>
+      <if test="orgname != null" >
+        #{orgname,jdbcType=VARCHAR},
+      </if>
+      <if test="casereason != null" >
+        #{casereason,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.Perdishonesty" >
+    update tb_per_dishonesty
+    <set >
+      <if test="pname != null" >
+        pname = #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="pnumber != null" >
+        pnumber = #{pnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="certtype != null" >
+        CERTTYPE = #{certtype,jdbcType=VARCHAR},
+      </if>
+      <if test="certno != null" >
+        CERTNO = #{certno,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        Age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        Gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="courtcode != null" >
+        COURTCODE = #{courtcode,jdbcType=VARCHAR},
+      </if>
+      <if test="courtname != null" >
+        COURTNAME = #{courtname,jdbcType=VARCHAR},
+      </if>
+      <if test="caseno != null" >
+        CASENO = #{caseno,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="partyrole != null" >
+        PARTYROLE = #{partyrole,jdbcType=VARCHAR},
+      </if>
+      <if test="registerdate != null" >
+        REGISTERDATE = #{registerdate,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcecase != null" >
+        ENFORCECASE = #{enforcecase,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcefileno != null" >
+        ENFORCEFILENO = #{enforcefileno,jdbcType=VARCHAR},
+      </if>
+      <if test="provincename != null" >
+        PROVINCENAME = #{provincename,jdbcType=VARCHAR},
+      </if>
+      <if test="validatedate != null" >
+        VALIDATEDATE = #{validatedate,jdbcType=DATE},
+      </if>
+      <if test="enforceorgname != null" >
+        ENFORCEORGNAME = #{enforceorgname,jdbcType=VARCHAR},
+      </if>
+      <if test="lawsuitobject != null" >
+        LAWSUITOBJECT = #{lawsuitobject,jdbcType=VARCHAR},
+      </if>
+      <if test="enforcemoney != null" >
+        ENFORCEMONEY = #{enforcemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforce != null" >
+        ALREADYENFORCE = #{alreadyenforce,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforcemoney != null" >
+        ALREADYENFORCEMONEY = #{alreadyenforcemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="casestate != null" >
+        CASESTATE = #{casestate,jdbcType=VARCHAR},
+      </if>
+      <if test="alreadyenforcecase != null" >
+        ALREADYENFORCECASE = #{alreadyenforcecase,jdbcType=VARCHAR},
+      </if>
+      <if test="closeddate != null" >
+        CLOSEDDATE = #{closeddate,jdbcType=DATE},
+      </if>
+      <if test="enforcetype != null" >
+        ENFORCETYPE = #{enforcetype,jdbcType=VARCHAR},
+      </if>
+      <if test="publishdate != null" >
+        PUBLISHDATE = #{publishdate,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        LOADDATE = #{loaddate,jdbcType=DATE},
+      </if>
+      <if test="orgname != null" >
+        ORGNAME = #{orgname,jdbcType=VARCHAR},
+      </if>
+      <if test="casereason != null" >
+        CASEREASON = #{casereason,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where pid = #{pid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="sy.model.Perdishonesty" >
+    update tb_per_dishonesty
+    set pname = #{pname,jdbcType=VARCHAR},
+      pnumber = #{pnumber,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      CERTTYPE = #{certtype,jdbcType=VARCHAR},
+      CERTNO = #{certno,jdbcType=VARCHAR},
+      Age = #{age,jdbcType=VARCHAR},
+      Gender = #{gender,jdbcType=VARCHAR},
+      COURTCODE = #{courtcode,jdbcType=VARCHAR},
+      COURTNAME = #{courtname,jdbcType=VARCHAR},
+      CASENO = #{caseno,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      PARTYROLE = #{partyrole,jdbcType=VARCHAR},
+      REGISTERDATE = #{registerdate,jdbcType=VARCHAR},
+      ENFORCECASE = #{enforcecase,jdbcType=VARCHAR},
+      ENFORCEFILENO = #{enforcefileno,jdbcType=VARCHAR},
+      PROVINCENAME = #{provincename,jdbcType=VARCHAR},
+      VALIDATEDATE = #{validatedate,jdbcType=DATE},
+      ENFORCEORGNAME = #{enforceorgname,jdbcType=VARCHAR},
+      LAWSUITOBJECT = #{lawsuitobject,jdbcType=VARCHAR},
+      ENFORCEMONEY = #{enforcemoney,jdbcType=VARCHAR},
+      ALREADYENFORCE = #{alreadyenforce,jdbcType=VARCHAR},
+      ALREADYENFORCEMONEY = #{alreadyenforcemoney,jdbcType=VARCHAR},
+      CASESTATE = #{casestate,jdbcType=VARCHAR},
+      ALREADYENFORCECASE = #{alreadyenforcecase,jdbcType=VARCHAR},
+      CLOSEDDATE = #{closeddate,jdbcType=DATE},
+      ENFORCETYPE = #{enforcetype,jdbcType=VARCHAR},
+      PUBLISHDATE = #{publishdate,jdbcType=VARCHAR},
+      LOADDATE = #{loaddate,jdbcType=DATE},
+      ORGNAME = #{orgname,jdbcType=VARCHAR},
+      CASEREASON = #{casereason,jdbcType=LONGVARCHAR}
+    where pid = #{pid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.Perdishonesty" >
+    update tb_per_dishonesty
+    set pname = #{pname,jdbcType=VARCHAR},
+      pnumber = #{pnumber,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      CERTTYPE = #{certtype,jdbcType=VARCHAR},
+      CERTNO = #{certno,jdbcType=VARCHAR},
+      Age = #{age,jdbcType=VARCHAR},
+      Gender = #{gender,jdbcType=VARCHAR},
+      COURTCODE = #{courtcode,jdbcType=VARCHAR},
+      COURTNAME = #{courtname,jdbcType=VARCHAR},
+      CASENO = #{caseno,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      PARTYROLE = #{partyrole,jdbcType=VARCHAR},
+      REGISTERDATE = #{registerdate,jdbcType=VARCHAR},
+      ENFORCECASE = #{enforcecase,jdbcType=VARCHAR},
+      ENFORCEFILENO = #{enforcefileno,jdbcType=VARCHAR},
+      PROVINCENAME = #{provincename,jdbcType=VARCHAR},
+      VALIDATEDATE = #{validatedate,jdbcType=DATE},
+      ENFORCEORGNAME = #{enforceorgname,jdbcType=VARCHAR},
+      LAWSUITOBJECT = #{lawsuitobject,jdbcType=VARCHAR},
+      ENFORCEMONEY = #{enforcemoney,jdbcType=VARCHAR},
+      ALREADYENFORCE = #{alreadyenforce,jdbcType=VARCHAR},
+      ALREADYENFORCEMONEY = #{alreadyenforcemoney,jdbcType=VARCHAR},
+      CASESTATE = #{casestate,jdbcType=VARCHAR},
+      ALREADYENFORCECASE = #{alreadyenforcecase,jdbcType=VARCHAR},
+      CLOSEDDATE = #{closeddate,jdbcType=DATE},
+      ENFORCETYPE = #{enforcetype,jdbcType=VARCHAR},
+      PUBLISHDATE = #{publishdate,jdbcType=VARCHAR},
+      LOADDATE = #{loaddate,jdbcType=DATE},
+      ORGNAME = #{orgname,jdbcType=VARCHAR}
+    where pid = #{pid,jdbcType=VARCHAR}
+  </update>
+  
+  <select id="selectBynn" resultMap="BaseResultMap" parameterType="java.lang.String" fetchSize="1000">
+    select 
+    <include refid="Base_Column_List" />,
+    <include refid="Blob_Column_List" /> 
+    from tb_per_dishonesty
+    where pname = #{0,jdbcType=VARCHAR} and pnumber = #{1,jdbcType=VARCHAR}
+  </select>
+</mapper>

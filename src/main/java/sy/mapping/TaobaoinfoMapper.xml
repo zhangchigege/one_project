@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.TaobaoinfoMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.Taobaoinfo" >
+    <id column="tbid" property="tbid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="birthDate" property="birthdate" jdbcType="VARCHAR" />
+    <result column="idtype" property="idtype" jdbcType="VARCHAR" />
+    <result column="idnumber" property="idnumber" jdbcType="VARCHAR" />
+    <result column="creditScore" property="creditscore" jdbcType="VARCHAR" />
+    <result column="feedbackRate" property="feedbackrate" jdbcType="VARCHAR" />
+    <result column="creditLevel" property="creditlevel" jdbcType="VARCHAR" />
+    <result column="creditStanding" property="creditstanding" jdbcType="VARCHAR" />
+    <result column="totalAmount" property="totalamount" jdbcType="VARCHAR" />
+    <result column="averageAmount" property="averageamount" jdbcType="VARCHAR" />
+    <result column="disputes" property="disputes" jdbcType="VARCHAR" />
+    <result column="disputesNumber" property="disputesnumber" jdbcType="VARCHAR" />
+    <result column="nearlyonemonth" property="nearlyonemonth" jdbcType="VARCHAR" />
+    <result column="nearlyoneconsumetotal" property="nearlyoneconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlyoneconsumemoney" property="nearlyoneconsumemoney" jdbcType="VARCHAR" />
+    <result column="nearlytwomonth" property="nearlytwomonth" jdbcType="VARCHAR" />
+    <result column="nearlytwoconsumetotal" property="nearlytwoconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlytwoconsumemoney" property="nearlytwoconsumemoney" jdbcType="VARCHAR" />
+    <result column="nearlythreemonth" property="nearlythreemonth" jdbcType="VARCHAR" />
+    <result column="nearlythreeconsumetotal" property="nearlythreeconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlythreeconsumemoney" property="nearlythreeconsumemoney" jdbcType="VARCHAR" />
+    <result column="loaddate" property="loaddate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    tbid, username, age, gender, birthDate, idtype, idnumber, creditScore, feedbackRate, 
+    creditLevel, creditStanding, totalAmount, averageAmount, disputes, disputesNumber, 
+    nearlyonemonth, nearlyoneconsumetotal, nearlyoneconsumemoney, nearlytwomonth, nearlytwoconsumetotal, 
+    nearlytwoconsumemoney, nearlythreemonth, nearlythreeconsumetotal, nearlythreeconsumemoney, 
+    loaddate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_taobaoinfo
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_taobaoinfo
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.Taobaoinfo" >
+    insert into tb_taobaoinfo (tbid, username, age, 
+      gender, birthDate, idtype, 
+      idnumber, creditScore, feedbackRate, 
+      creditLevel, creditStanding, totalAmount, 
+      averageAmount, disputes, disputesNumber, 
+      nearlyonemonth, nearlyoneconsumetotal, 
+      nearlyoneconsumemoney, nearlytwomonth, 
+      nearlytwoconsumetotal, nearlytwoconsumemoney, 
+      nearlythreemonth, nearlythreeconsumetotal, 
+      nearlythreeconsumemoney, loaddate)
+    values (#{tbid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{birthdate,jdbcType=VARCHAR}, #{idtype,jdbcType=VARCHAR}, 
+      #{idnumber,jdbcType=VARCHAR}, #{creditscore,jdbcType=VARCHAR}, #{feedbackrate,jdbcType=VARCHAR}, 
+      #{creditlevel,jdbcType=VARCHAR}, #{creditstanding,jdbcType=VARCHAR}, #{totalamount,jdbcType=VARCHAR}, 
+      #{averageamount,jdbcType=VARCHAR}, #{disputes,jdbcType=VARCHAR}, #{disputesnumber,jdbcType=VARCHAR}, 
+      #{nearlyonemonth,jdbcType=VARCHAR}, #{nearlyoneconsumetotal,jdbcType=VARCHAR}, 
+      #{nearlyoneconsumemoney,jdbcType=VARCHAR}, #{nearlytwomonth,jdbcType=VARCHAR}, 
+      #{nearlytwoconsumetotal,jdbcType=VARCHAR}, #{nearlytwoconsumemoney,jdbcType=VARCHAR}, 
+      #{nearlythreemonth,jdbcType=VARCHAR}, #{nearlythreeconsumetotal,jdbcType=VARCHAR}, 
+      #{nearlythreeconsumemoney,jdbcType=VARCHAR}, #{loaddate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.Taobaoinfo" >
+    insert into tb_taobaoinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="tbid != null" >
+        tbid,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="birthdate != null" >
+        birthDate,
+      </if>
+      <if test="idtype != null" >
+        idtype,
+      </if>
+      <if test="idnumber != null" >
+        idnumber,
+      </if>
+      <if test="creditscore != null" >
+        creditScore,
+      </if>
+      <if test="feedbackrate != null" >
+        feedbackRate,
+      </if>
+      <if test="creditlevel != null" >
+        creditLevel,
+      </if>
+      <if test="creditstanding != null" >
+        creditStanding,
+      </if>
+      <if test="totalamount != null" >
+        totalAmount,
+      </if>
+      <if test="averageamount != null" >
+        averageAmount,
+      </if>
+      <if test="disputes != null" >
+        disputes,
+      </if>
+      <if test="disputesnumber != null" >
+        disputesNumber,
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth,
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        nearlyoneconsumetotal,
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        nearlyoneconsumemoney,
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth,
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        nearlytwoconsumetotal,
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        nearlytwoconsumemoney,
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth,
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        nearlythreeconsumetotal,
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        nearlythreeconsumemoney,
+      </if>
+      <if test="loaddate != null" >
+        loaddate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="tbid != null" >
+        #{tbid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="creditscore != null" >
+        #{creditscore,jdbcType=VARCHAR},
+      </if>
+      <if test="feedbackrate != null" >
+        #{feedbackrate,jdbcType=VARCHAR},
+      </if>
+      <if test="creditlevel != null" >
+        #{creditlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="creditstanding != null" >
+        #{creditstanding,jdbcType=VARCHAR},
+      </if>
+      <if test="totalamount != null" >
+        #{totalamount,jdbcType=VARCHAR},
+      </if>
+      <if test="averageamount != null" >
+        #{averageamount,jdbcType=VARCHAR},
+      </if>
+      <if test="disputes != null" >
+        #{disputes,jdbcType=VARCHAR},
+      </if>
+      <if test="disputesnumber != null" >
+        #{disputesnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.Taobaoinfo" >
+    update tb_taobaoinfo
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        birthDate = #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        idtype = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        idnumber = #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="creditscore != null" >
+        creditScore = #{creditscore,jdbcType=VARCHAR},
+      </if>
+      <if test="feedbackrate != null" >
+        feedbackRate = #{feedbackrate,jdbcType=VARCHAR},
+      </if>
+      <if test="creditlevel != null" >
+        creditLevel = #{creditlevel,jdbcType=VARCHAR},
+      </if>
+      <if test="creditstanding != null" >
+        creditStanding = #{creditstanding,jdbcType=VARCHAR},
+      </if>
+      <if test="totalamount != null" >
+        totalAmount = #{totalamount,jdbcType=VARCHAR},
+      </if>
+      <if test="averageamount != null" >
+        averageAmount = #{averageamount,jdbcType=VARCHAR},
+      </if>
+      <if test="disputes != null" >
+        disputes = #{disputes,jdbcType=VARCHAR},
+      </if>
+      <if test="disputesnumber != null" >
+        disputesNumber = #{disputesnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        nearlyoneconsumetotal = #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        nearlyoneconsumemoney = #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        nearlytwoconsumetotal = #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        nearlytwoconsumemoney = #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        nearlythreeconsumetotal = #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        nearlythreeconsumemoney = #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        loaddate = #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.Taobaoinfo" >
+    update tb_taobaoinfo
+    set username = #{username,jdbcType=VARCHAR},
+      age = #{age,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      birthDate = #{birthdate,jdbcType=VARCHAR},
+      idtype = #{idtype,jdbcType=VARCHAR},
+      idnumber = #{idnumber,jdbcType=VARCHAR},
+      creditScore = #{creditscore,jdbcType=VARCHAR},
+      feedbackRate = #{feedbackrate,jdbcType=VARCHAR},
+      creditLevel = #{creditlevel,jdbcType=VARCHAR},
+      creditStanding = #{creditstanding,jdbcType=VARCHAR},
+      totalAmount = #{totalamount,jdbcType=VARCHAR},
+      averageAmount = #{averageamount,jdbcType=VARCHAR},
+      disputes = #{disputes,jdbcType=VARCHAR},
+      disputesNumber = #{disputesnumber,jdbcType=VARCHAR},
+      nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      nearlyoneconsumetotal = #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      nearlyoneconsumemoney = #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      nearlytwoconsumetotal = #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      nearlytwoconsumemoney = #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      nearlythreeconsumetotal = #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      nearlythreeconsumemoney = #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      loaddate = #{loaddate,jdbcType=TIMESTAMP}
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectBytbid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_taobaoinfo
+    where tbid = #{tbid,jdbcType=VARCHAR}
+  </select>
+</mapper>

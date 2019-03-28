@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.JingdonginfoMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.Jingdonginfo" >
+    <id column="jdid" property="jdid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
+    <result column="birthDate" property="birthdate" jdbcType="VARCHAR" />
+    <result column="idtype" property="idtype" jdbcType="VARCHAR" />
+    <result column="idnumber" property="idnumber" jdbcType="VARCHAR" />
+    <result column="jdname" property="jdname" jdbcType="VARCHAR" />
+    <result column="ulevel" property="ulevel" jdbcType="VARCHAR" />
+    <result column="xylevel" property="xylevel" jdbcType="VARCHAR" />
+    <result column="sxzed" property="sxzed" jdbcType="VARCHAR" />
+    <result column="fqje" property="fqje" jdbcType="VARCHAR" />
+    <result column="yyzed" property="yyzed" jdbcType="VARCHAR" />
+    <result column="nearlyonemonth" property="nearlyonemonth" jdbcType="VARCHAR" />
+    <result column="nearlyoneconsumetotal" property="nearlyoneconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlyoneconsumemoney" property="nearlyoneconsumemoney" jdbcType="VARCHAR" />
+    <result column="nearlytwomonth" property="nearlytwomonth" jdbcType="VARCHAR" />
+    <result column="nearlytwoconsumetotal" property="nearlytwoconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlytwoconsumemoney" property="nearlytwoconsumemoney" jdbcType="VARCHAR" />
+    <result column="nearlythreemonth" property="nearlythreemonth" jdbcType="VARCHAR" />
+    <result column="nearlythreeconsumetotal" property="nearlythreeconsumetotal" jdbcType="VARCHAR" />
+    <result column="nearlythreeconsumemoney" property="nearlythreeconsumemoney" jdbcType="VARCHAR" />
+    <result column="loaddate" property="loaddate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    jdid, username, age, gender, birthDate, idtype, idnumber, jdname, ulevel, xylevel, 
+    sxzed, fqje, yyzed, nearlyonemonth, nearlyoneconsumetotal, nearlyoneconsumemoney, 
+    nearlytwomonth, nearlytwoconsumetotal, nearlytwoconsumemoney, nearlythreemonth, nearlythreeconsumetotal, 
+    nearlythreeconsumemoney, loaddate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_jingdonginfo
+    where jdid = #{jdid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_jingdonginfo
+    where jdid = #{jdid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.Jingdonginfo" >
+    insert into tb_jingdonginfo (jdid, username, age, 
+      gender, birthDate, idtype, 
+      idnumber, jdname, ulevel, 
+      xylevel, sxzed, fqje, 
+      yyzed, nearlyonemonth, nearlyoneconsumetotal, 
+      nearlyoneconsumemoney, nearlytwomonth, 
+      nearlytwoconsumetotal, nearlytwoconsumemoney, 
+      nearlythreemonth, nearlythreeconsumetotal, 
+      nearlythreeconsumemoney, loaddate)
+    values (#{jdid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=VARCHAR}, #{birthdate,jdbcType=VARCHAR}, #{idtype,jdbcType=VARCHAR}, 
+      #{idnumber,jdbcType=VARCHAR}, #{jdname,jdbcType=VARCHAR}, #{ulevel,jdbcType=VARCHAR}, 
+      #{xylevel,jdbcType=VARCHAR}, #{sxzed,jdbcType=VARCHAR}, #{fqje,jdbcType=VARCHAR}, 
+      #{yyzed,jdbcType=VARCHAR}, #{nearlyonemonth,jdbcType=VARCHAR}, #{nearlyoneconsumetotal,jdbcType=VARCHAR}, 
+      #{nearlyoneconsumemoney,jdbcType=VARCHAR}, #{nearlytwomonth,jdbcType=VARCHAR}, 
+      #{nearlytwoconsumetotal,jdbcType=VARCHAR}, #{nearlytwoconsumemoney,jdbcType=VARCHAR}, 
+      #{nearlythreemonth,jdbcType=VARCHAR}, #{nearlythreeconsumetotal,jdbcType=VARCHAR}, 
+      #{nearlythreeconsumemoney,jdbcType=VARCHAR}, #{loaddate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.Jingdonginfo" >
+    insert into tb_jingdonginfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="jdid != null" >
+        jdid,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="gender != null" >
+        gender,
+      </if>
+      <if test="birthdate != null" >
+        birthDate,
+      </if>
+      <if test="idtype != null" >
+        idtype,
+      </if>
+      <if test="idnumber != null" >
+        idnumber,
+      </if>
+      <if test="jdname != null" >
+        jdname,
+      </if>
+      <if test="ulevel != null" >
+        ulevel,
+      </if>
+      <if test="xylevel != null" >
+        xylevel,
+      </if>
+      <if test="sxzed != null" >
+        sxzed,
+      </if>
+      <if test="fqje != null" >
+        fqje,
+      </if>
+      <if test="yyzed != null" >
+        yyzed,
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth,
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        nearlyoneconsumetotal,
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        nearlyoneconsumemoney,
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth,
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        nearlytwoconsumetotal,
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        nearlytwoconsumemoney,
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth,
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        nearlythreeconsumetotal,
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        nearlythreeconsumemoney,
+      </if>
+      <if test="loaddate != null" >
+        loaddate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="jdid != null" >
+        #{jdid,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="jdname != null" >
+        #{jdname,jdbcType=VARCHAR},
+      </if>
+      <if test="ulevel != null" >
+        #{ulevel,jdbcType=VARCHAR},
+      </if>
+      <if test="xylevel != null" >
+        #{xylevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sxzed != null" >
+        #{sxzed,jdbcType=VARCHAR},
+      </if>
+      <if test="fqje != null" >
+        #{fqje,jdbcType=VARCHAR},
+      </if>
+      <if test="yyzed != null" >
+        #{yyzed,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.Jingdonginfo" >
+    update tb_jingdonginfo
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        gender = #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="birthdate != null" >
+        birthDate = #{birthdate,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null" >
+        idtype = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        idnumber = #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="jdname != null" >
+        jdname = #{jdname,jdbcType=VARCHAR},
+      </if>
+      <if test="ulevel != null" >
+        ulevel = #{ulevel,jdbcType=VARCHAR},
+      </if>
+      <if test="xylevel != null" >
+        xylevel = #{xylevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sxzed != null" >
+        sxzed = #{sxzed,jdbcType=VARCHAR},
+      </if>
+      <if test="fqje != null" >
+        fqje = #{fqje,jdbcType=VARCHAR},
+      </if>
+      <if test="yyzed != null" >
+        yyzed = #{yyzed,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyonemonth != null" >
+        nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumetotal != null" >
+        nearlyoneconsumetotal = #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlyoneconsumemoney != null" >
+        nearlyoneconsumemoney = #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwomonth != null" >
+        nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumetotal != null" >
+        nearlytwoconsumetotal = #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlytwoconsumemoney != null" >
+        nearlytwoconsumemoney = #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreemonth != null" >
+        nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumetotal != null" >
+        nearlythreeconsumetotal = #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      </if>
+      <if test="nearlythreeconsumemoney != null" >
+        nearlythreeconsumemoney = #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        loaddate = #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where jdid = #{jdid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.Jingdonginfo" >
+    update tb_jingdonginfo
+    set username = #{username,jdbcType=VARCHAR},
+      age = #{age,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=VARCHAR},
+      birthDate = #{birthdate,jdbcType=VARCHAR},
+      idtype = #{idtype,jdbcType=VARCHAR},
+      idnumber = #{idnumber,jdbcType=VARCHAR},
+      jdname = #{jdname,jdbcType=VARCHAR},
+      ulevel = #{ulevel,jdbcType=VARCHAR},
+      xylevel = #{xylevel,jdbcType=VARCHAR},
+      sxzed = #{sxzed,jdbcType=VARCHAR},
+      fqje = #{fqje,jdbcType=VARCHAR},
+      yyzed = #{yyzed,jdbcType=VARCHAR},
+      nearlyonemonth = #{nearlyonemonth,jdbcType=VARCHAR},
+      nearlyoneconsumetotal = #{nearlyoneconsumetotal,jdbcType=VARCHAR},
+      nearlyoneconsumemoney = #{nearlyoneconsumemoney,jdbcType=VARCHAR},
+      nearlytwomonth = #{nearlytwomonth,jdbcType=VARCHAR},
+      nearlytwoconsumetotal = #{nearlytwoconsumetotal,jdbcType=VARCHAR},
+      nearlytwoconsumemoney = #{nearlytwoconsumemoney,jdbcType=VARCHAR},
+      nearlythreemonth = #{nearlythreemonth,jdbcType=VARCHAR},
+      nearlythreeconsumetotal = #{nearlythreeconsumetotal,jdbcType=VARCHAR},
+      nearlythreeconsumemoney = #{nearlythreeconsumemoney,jdbcType=VARCHAR},
+      loaddate = #{loaddate,jdbcType=TIMESTAMP}
+    where jdid = #{jdid,jdbcType=VARCHAR}
+  </update>
+  
+  <select id="selectByJdid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_jingdonginfo
+    where jdid = #{jdid,jdbcType=VARCHAR}
+  </select>
+</mapper>

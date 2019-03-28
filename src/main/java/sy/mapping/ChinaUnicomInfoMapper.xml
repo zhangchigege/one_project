@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="sy.dao.ChinaUnicomInfoMapper" >
+  <resultMap id="BaseResultMap" type="sy.model.ChinaUnicomInfo" >
+    <id column="ChinaUid" property="chinauid" jdbcType="VARCHAR" />
+    <result column="ChinaUpersonname" property="chinaupersonname" jdbcType="VARCHAR" />
+    <result column="ChinaUpersonsex" property="chinaupersonsex" jdbcType="VARCHAR" />
+    <result column="ChinaUpaperNum" property="chinaupapernum" jdbcType="VARCHAR" />
+    <result column="ChinaUpaperAddress" property="chinaupaperaddress" jdbcType="VARCHAR" />
+    <result column="loaddate" property="loaddate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ChinaUid, ChinaUpersonname, ChinaUpersonsex, ChinaUpaperNum, ChinaUpaperAddress, 
+    loaddate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_chinaunicominfo
+    where ChinaUid = #{chinauid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from tb_chinaunicominfo
+    where ChinaUid = #{chinauid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="sy.model.ChinaUnicomInfo" >
+    insert into tb_chinaunicominfo (ChinaUid, ChinaUpersonname, ChinaUpersonsex, 
+      ChinaUpaperNum, ChinaUpaperAddress, loaddate
+      )
+    values (#{chinauid,jdbcType=VARCHAR}, #{chinaupersonname,jdbcType=VARCHAR}, #{chinaupersonsex,jdbcType=VARCHAR}, 
+      #{chinaupapernum,jdbcType=VARCHAR}, #{chinaupaperaddress,jdbcType=VARCHAR}, #{loaddate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="sy.model.ChinaUnicomInfo" >
+    insert into tb_chinaunicominfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="chinauid != null" >
+        ChinaUid,
+      </if>
+      <if test="chinaupersonname != null" >
+        ChinaUpersonname,
+      </if>
+      <if test="chinaupersonsex != null" >
+        ChinaUpersonsex,
+      </if>
+      <if test="chinaupapernum != null" >
+        ChinaUpaperNum,
+      </if>
+      <if test="chinaupaperaddress != null" >
+        ChinaUpaperAddress,
+      </if>
+      <if test="loaddate != null" >
+        loaddate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="chinauid != null" >
+        #{chinauid,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupersonname != null" >
+        #{chinaupersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupersonsex != null" >
+        #{chinaupersonsex,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupapernum != null" >
+        #{chinaupapernum,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupaperaddress != null" >
+        #{chinaupaperaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="sy.model.ChinaUnicomInfo" >
+    update tb_chinaunicominfo
+    <set >
+      <if test="chinaupersonname != null" >
+        ChinaUpersonname = #{chinaupersonname,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupersonsex != null" >
+        ChinaUpersonsex = #{chinaupersonsex,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupapernum != null" >
+        ChinaUpaperNum = #{chinaupapernum,jdbcType=VARCHAR},
+      </if>
+      <if test="chinaupaperaddress != null" >
+        ChinaUpaperAddress = #{chinaupaperaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="loaddate != null" >
+        loaddate = #{loaddate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ChinaUid = #{chinauid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="sy.model.ChinaUnicomInfo" >
+    update tb_chinaunicominfo
+    set ChinaUpersonname = #{chinaupersonname,jdbcType=VARCHAR},
+      ChinaUpersonsex = #{chinaupersonsex,jdbcType=VARCHAR},
+      ChinaUpaperNum = #{chinaupapernum,jdbcType=VARCHAR},
+      ChinaUpaperAddress = #{chinaupaperaddress,jdbcType=VARCHAR},
+      loaddate = #{loaddate,jdbcType=TIMESTAMP}
+    where ChinaUid = #{chinauid,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByltid" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_chinaunicominfo
+    where ChinaUid = #{chinauid,jdbcType=VARCHAR}
+  </select>
+</mapper>

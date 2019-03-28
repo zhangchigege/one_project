@@ -1,0 +1,195 @@
+
+\squid:S1197ñ
+"8Move the array designator from the variable to the type.(ú÷íùüÿÿÿÿ8Õµú•›-
+Msquid:S1068g"*Remove this unused "writer" private field.(´¦›òùÿÿÿÿ8ÚÏƒÏ™-
+\squid:S1197ù"8Move the array designator from the variable to the type.(ñ¾ùÜıÿÿÿÿ8Õµú•›-
+Gsquid:S1148®"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬­Í–›-
+\squid:S1197œ"8Move the array designator from the variable to the type.(øœÒşÿÿÿÿ8Õµú•›-
+qsquid:S3776ú"RRefactor this method to reduce its Cognitive Complexity from 72 to the 15 allowed.(Ú‚²ï8Õµú•›-
+jsquid:CommentedOutCodeLineù"<This block of commented-out lines of code should be removed.(ÖòÑå8Õµú•›-
+xsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ„•÷8Õµú•›-
+V
+squid:S106å"9Replace this use of System.out or System.err by a logger.(İ÷ß8Õµú•›-
+bsquid:S1155‰">Use isEmpty() to check whether the collection is empty or not.(É€°Îøÿÿÿÿ8ÚÏƒÏ™-
+dsquid:S2147à"ECombine this catch with the one at line 604, which has the same body.(ï­£Ä8Õµú•›-
+msquid:S1192Ğ"IDefine a constant instead of duplicating this literal "Referer" 10 times.(¤ËÑ¨ùÿÿÿÿ8ÚÏƒÏ™-
+Qsquid:S1481Ã"2Remove this unused "taobaoaddress" local variable.(¹ÿä¼8Õµú•›-
+jsquid:CommentedOutCodeLineÄ"<This block of commented-out lines of code should be removed.(‚Œ¹8Õµú•›-
+}squid:S2293×	"YReplace the type specification in this constructor call with the diamond operator ("<>").(òÖ·¶øÿÿÿÿ8Õµú•›-
+osquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(ğ¤°´ıÿÿÿÿ8Õµú•›-
+\
+squid:S106¬"9Replace this use of System.out or System.err by a logger.(ò«Ëùÿÿÿÿ8¬­Í–›-
+]squid:S1155Á">Use isEmpty() to check whether the collection is empty or not.(–‹ëÊ8ÚÏƒÏ™-
+Wsquid:S1197õ"8Move the array designator from the variable to the type.(‚ù’Ï8Õµú•›-
+dsquid:S2147³"ECombine this catch with the one at line 429, which has the same body.(ï­£Ä8ÚÏƒÏ™-
+isquid:S2147Ş"ECombine this catch with the one at line 604, which has the same body.(âÃƒŠıÿÿÿÿ8¬­Í–›-
+\squid:S1197Ä"8Move the array designator from the variable to the type.(ú÷íùüÿÿÿÿ8Õµú•›-
+^squid:S1192˜"FDefine a constant instead of duplicating this literal "UTF-8" 6 times.(Îß³
+Gsquid:S1148°"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+jsquid:S2147Ù"FCombine this catch with the one at line 1879, which has the same body.(é–³öûÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLine”"<This block of commented-out lines of code should be removed.(Áå°8Õµú•›-
+Gsquid:S1148à"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+gsquid:S1858»	"C"substring" returns a string, there's no need to call "toString()".(¦¡Ú²ûÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLineì"<This block of commented-out lines of code should be removed.(È¦Ñô8Õµú•›-
+isquid:S1192¹"JDefine a constant instead of duplicating this literal "createDay" 4 times.(òÔŞ…8Õµú•›-
+xsquid:S2293§"YReplace the type specification in this constructor call with the diamond operator ("<>").(Š¾Šø8Õµú•›-
+Gsquid:S1148³"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLine©"<This block of commented-out lines of code should be removed.(Õç™˜8Õµú•›-
+~squid:S1149Ø"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Õ‹¦Ò8Õµú•›-
+ksquid:S00112œ"FDefine and throw a dedicated exception instead of using a generic one.(ÏÀÉ½ûÿÿÿÿ8ÚÏƒÏ™-
+W
+squid:S106‡
+"9Replace this use of System.out or System.err by a logger.(ğıÛ‡8Õµú•›-
+dsquid:S2147…"ECombine this catch with the one at line 257, which has the same body.(ï­£Ä8Õµú•›-
+Gsquid:S1148ù"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+isquid:S2147¯"ECombine this catch with the one at line 429, which has the same body.(‡¤“Óûÿÿÿÿ8¬­Í–›-
+}squid:S2293š"YReplace the type specification in this constructor call with the diamond operator ("<>").(òÖ·¶øÿÿÿÿ8Õµú•›-
+Ssquid:S1068m"0Remove this unused "checkCodeURL" private field.(¨ÑÑ¯ùÿÿÿÿ8¬­Í–›-
+jsquid:CommentedOutCodeLineœ"<This block of commented-out lines of code should be removed.(üâöœ8Õµú•›-
+jsquid:CommentedOutCodeLine¤"<This block of commented-out lines of code should be removed.( µëë8Õµú•›-
+esquid:S2147ë"FCombine this catch with the one at line 1511, which has the same body.(ï­£Ä8¬­Í–›-
+W
+squid:S106¼"9Replace this use of System.out or System.err by a logger.(ğıÛ‡8Õµú•›-
+qsquid:S00117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û°ó©8Õµú•›-
+gsquid:S1858ñ"C"substring" returns a string, there's no need to call "toString()".(¦¡Ú²ûÿÿÿÿ8Õµú•›-
+Bsquid:S1481¸"*Remove this unused "body1" local variable.(ˆ¼ô»
+qsquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ‘¡¹8Õµú•›-
+nsquid:S1192»"JDefine a constant instead of duplicating this literal "actualFee" 4 times.(ğßÑşøÿÿÿÿ8Õµú•›-
+\
+squid:S106ı"9Replace this use of System.out or System.err by a logger.(äİÉ®şÿÿÿÿ8Õµú•›-
+Gsquid:S1148²"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÏƒÏ™-
+bsquid:S1155®">Use isEmpty() to check whether the collection is empty or not.(´äïŠùÿÿÿÿ8Õµú•›-
+ssquid:S1192ˆ"ODefine a constant instead of duplicating this literal "XMLHttpRequest" 4 times.(™Œï‰ÿÿÿÿÿ8Õµú•›-
+W
+squid:S106 "9Replace this use of System.out or System.err by a logger.(õ»¾â8Õµú•›-
+ësquid:S1192…"ËDefine a constant instead of duplicating this literal "https://buyertrade.taobao.com/trade/itemlist/asyncBought.htm?action=itemlist/BoughtQueryAction&event_submit_do_query=1&_input_charset=utf8" 4 times.(Şî¼‚8Õµú•›-
+zsquid:S1192³"VDefine a constant instead of duplicating this literal "perdishonestyFormlist" 4 times.(©‘•Ãşÿÿÿÿ8ÚÏƒÏ™-
+Gsquid:S1148ì"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÏƒÏ™-
+W
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŸÊûŸ8Õµú•›-
+osquid:CommentedOutCodeLine…"<This block of commented-out lines of code should be removed.(½ñ•Øÿÿÿÿÿ8Õµú•›-
+Gsquid:S1148Ş"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+Gsquid:S1481¬"(Remove this unused "ued" local variable.(•ŸãÕ8Õµú•›-
+`squid:S2259õ"AA "NullPointerException" could be thrown; "str" is nullable here.(‚ù’Ï8Õµú•›-
+Gsquid:S1148†"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+Wsquid:S1197ş"8Move the array designator from the variable to the type.(Ì½¥ç8Õµú•›-
+xsquid:S2293ó"YReplace the type specification in this constructor call with the diamond operator ("<>").(«üÎŒ8Õµú•›-
+rsquid:S1192«"NDefine a constant instead of duplicating this literal "billMaterials" 3 times.(ÚÎèûÿÿÿÿ8Õµú•›-
+xsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ„•÷8Õµú•›-
+Gsquid:S1148á"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+¨squid:S1192Š"ƒDefine a constant instead of duplicating this literal "https://buyertrade.taobao.com/trade/itemlist/list_bought_items.htm" 6 times.(İÛ¾‡şÿÿÿÿ8Õµú•›-
+\squid:S1197˜"8Move the array designator from the variable to the type.(¬õ¥ßüÿÿÿÿ8Õµú•›-
+msquid:S1192Š"IDefine a constant instead of duplicating this literal "tbuserid" 4 times.(‚Ô¶İøÿÿÿÿ8ÚÏƒÏ™-
+Nsquid:S1481‰	"*Remove this unused "body4" local variable.(ïæşÉüÿÿÿÿ8Õµú•›-
+rsquid:S1192À"SDefine a constant instead of duplicating this literal "\\&[a-zA-Z]{1,10};" 4 times.(ü¯°á8Õµú•›-
+Wsquid:S1197"8Move the array designator from the variable to the type.(Î“Û·8Õµú•›-
+osquid:CommentedOutCodeLineû"<This block of commented-out lines of code should be removed.(ñü”ûÿÿÿÿ8Õµú•›-
+V
+squid:S106¡"9Replace this use of System.out or System.err by a logger.(ŠÄë8Õµú•›-
+osquid:CommentedOutCodeLineÛ"<This block of commented-out lines of code should be removed.(Ì«®Èøÿÿÿÿ8Õµú•›-
+qsquid:S00117›
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û°ó©8Õµú•›-
+xsquid:S1192‘"TDefine a constant instead of duplicating this literal "accept-Content-Type" 6 times.(©ìï²úÿÿÿÿ8Õµú•›-
+\
+squid:S106÷"9Replace this use of System.out or System.err by a logger.(¼÷Èõşÿÿÿÿ8Õµú•›-
+]squid:S1155ß">Use isEmpty() to check whether the collection is empty or not.(«§ü¢8ÚÏƒÏ™-
+Ssquid:S1751Ç"6Remove this "return" statement or make it conditional.(“À™–ıÿÿÿÿ
+Gsquid:S1148ß"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬­Í–›-
+nsquid:S1192"JDefine a constant instead of duplicating this literal "prePageNo" 4 times.(ºö¯˜úÿÿÿÿ8Õµú•›-
+jsquid:S2147é"FCombine this catch with the one at line 1511, which has the same body.(‡¤“Óûÿÿÿÿ8Õµú•›-
+qsquid:S1192”"MDefine a constant instead of duplicating this literal "^((\r\n)|\n)" 6 times.(ã—‘‘üÿÿÿÿ8Õµú•›-
+bsquid:S1858â"C"substring" returns a string, there's no need to call "toString()".(ƒ—õ’8Õµú•›-
+W
+squid:S106Ê"9Replace this use of System.out or System.err by a logger.(ğıÛ‡8Õµú•›-
+}squid:S2293ä	"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñıïğıÿÿÿÿ8Õµú•›-
+esquid:S2147á"FCombine this catch with the one at line 1879, which has the same body.(ï­£Ä8Õµú•›-
+osquid:CommentedOutCodeLineø"<This block of commented-out lines of code should be removed.(ï½Õòùÿÿÿÿ8Õµú•›-
+jsquid:S2147İ"FCombine this catch with the one at line 1879, which has the same body.(‡¤“Óûÿÿÿÿ8Õµú•›-
+W
+squid:S106É
+"9Replace this use of System.out or System.err by a logger.(ŸÊûŸ8Õµú•›-
+jsquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(ÎŒñü8Õµú•›-
+]squid:S1155¡">Use isEmpty() to check whether the collection is empty or not.(Ëƒ›•8ÚÏƒÏ™-
+Gsquid:S1148İ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬­Í–›-
+osquid:S1192×"KDefine a constant instead of duplicating this literal "yyyy-MM-dd" 3 times.(ä‰®¥ùÿÿÿÿ8Õµú•›-
+osquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(¾‰İãøÿÿÿÿ8Õµú•›-
+osquid:CommentedOutCodeLineØ"<This block of commented-out lines of code should be removed.(™Û©×ıÿÿÿÿ8²çå›-
+Osquid:S1068f",Remove this unused "response" private field.(¤ÓµÉùÿÿÿÿ8¬­Í–›-
+isquid:S1192·"JDefine a constant instead of duplicating this literal "orderInfo" 4 times.(°Ñã8Õµú•›-
+Gsquid:S1148‚"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLine‚"<This block of commented-out lines of code should be removed.(Ğûù‚8Õµú•›-
+\
+squid:S106—"9Replace this use of System.out or System.err by a logger.(øµ Œùÿÿÿÿ8ÚÏƒÏ™-
+esquid:S1192Ë"FDefine a constant instead of duplicating this literal "value" 4 times.(ìØ×8Õµú•›-
+Wsquid:S1197“"8Move the array designator from the variable to the type.(í©•8Õµú•›-
+Wsquid:S1197"8Move the array designator from the variable to the type.(ºÍœÈ8Õµú•›-
+ssquid:S00100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€©¿åúÿÿÿÿ8Õµú•›-
+Gsquid:S1148„"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+¥squid:S1186â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Ú¼Áùÿÿÿÿ8Õµú•›-
+Gsquid:S1148ê"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+Nsquid:S1481ƒ	"*Remove this unused "body2" local variable.(ÿ‡œéúÿÿÿÿ8Õµú•›-
+bsquid:S1155ı">Use isEmpty() to check whether the collection is empty or not.(«ƒï‚şÿÿÿÿ8ÚÏƒÏ™-
+Wsquid:S1197†"8Move the array designator from the variable to the type.(Òøö 8²çå›-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éÀ²½8Õµú•›-
+}squid:S2293§"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñıïğıÿÿÿÿ8Õµú•›-
+W
+squid:S106›"9Replace this use of System.out or System.err by a logger.(ı¶˜Ä8¬­Í–›-
+usquid:S1192ˆ"QDefine a constant instead of duplicating this literal "X-Requested-With" 4 times.(™Œï‰ÿÿÿÿÿ8Õµú•›-
+osquid:CommentedOutCodeLine˜"<This block of commented-out lines of code should be removed.(ãÂµĞüÿÿÿÿ8Õµú•›-
+Ksquid:S1481û",Remove this unused "bodyzy2" local variable.(ÀùÏ8Õµú•›-
+lsquid:S1192Á"HDefine a constant instead of duplicating this literal "[(/>)<]" 4 times.(â°Æšÿÿÿÿÿ8Õµú•›-
+Wsquid:S1197ú"8Move the array designator from the variable to the type.(Ó´—ı8Õµú•›-
+hsquid:S1192"IDefine a constant instead of duplicating this literal "pageSize" 4 times.(è”ÀÓ8Õµú•›-
+psquid:S3776Ä"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(Ò”z8Õµú•›-
+xsquid:S2293¤"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ„•÷8¬­Í–›-
+qsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶§‹­8Õµú•›-
+gsquid:S1192À"HDefine a constant instead of duplicating this literal "<[^>]*>" 4 times.(ü¯°á8Õµú•›-
+xsquid:S2293ë
+"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸ÏÚÔ8Õµú•›-
+bsquid:S1858¬	"C"substring" returns a string, there's no need to call "toString()".(ƒ—õ’8Õµú•›-
+Gsquid:S1148Ø"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+psquid:S2068å"Q'Pwd' detected in this expression, review this potentially hard-coded credential.(¦ÂÊñ8Õµú•›-
+Ysquid:S1141ô"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Õµú•›-
+isquid:S2147ƒ"ECombine this catch with the one at line 257, which has the same body.(âÃƒŠıÿÿÿÿ8Õµú•›-
+jsquid:S2147ß"FCombine this catch with the one at line 1879, which has the same body.(âÃƒŠıÿÿÿÿ8ÚÏƒÏ™-
+Isquid:S1481¿"*Remove this unused "body1" local variable.(ˆ¼ô»8Õµú•›-
+~squid:S1149¢	"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Õ‹¦Ò8Õµú•›-
+Wsquid:S1197’"8Move the array designator from the variable to the type.(İé¢û8Õµú•›-
+osquid:CommentedOutCodeLineö"<This block of commented-out lines of code should be removed.(ÀÙÂøÿÿÿÿ8Õµú•›-
+Psquid:S1197”"8Move the array designator from the variable to the type.(ŒïÛš
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÓËº£8Õµú•›-
+xsquid:S2293‹"YReplace the type specification in this constructor call with the diamond operator ("<>").(Öş¡ì8Õµú•›-
+qsquid:S3776²"RRefactor this method to reduce its Cognitive Complexity from 84 to the 15 allowed.(á‡Ñô8ÚÏƒÏ™-
+Jsquid:S1481õ"+Remove this unused "bodyzy" local variable.(‘“³Ù8Õµú•›-
+Gsquid:S1148â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+osquid:CommentedOutCodeLine·"<This block of commented-out lines of code should be removed.(ÿÇŞ¬øÿÿÿÿ8Õµú•›-
+\squid:S1197ö"8Move the array designator from the variable to the type.(×¤Àÿÿÿÿÿ8Õµú•›-
+xsquid:S2293¾"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸ÏÚÔ8Õµú•›-
+osquid:CommentedOutCodeLine "<This block of commented-out lines of code should be removed.(µŸø­ùÿÿÿÿ8Õµú•›-
+esquid:S2142×"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Õµú•›-
+jsquid:CommentedOutCodeLineç"<This block of commented-out lines of code should be removed.(˜÷—Î8Õµú•›-
+msquid:S1192"IDefine a constant instead of duplicating this literal "jduserid" 3 times.(şå¿¹ÿÿÿÿÿ8ÚÏƒÏ™-
+osquid:CommentedOutCodeLineŞ"<This block of commented-out lines of code should be removed.(Îœ Øøÿÿÿÿ8ÚÏƒÏ™-
+Gsquid:S1148è"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+Gsquid:S1148Ú"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Õµú•›-
+xsquid:S1192”"[Define a constant instead of duplicating this literal "((\r\n)|\n)[\\s\t ]*(\\1)+" 6 times.(ã—‘‘üÿÿÿÿ
+osquid:CommentedOutCodeLine¢"<This block of commented-out lines of code should be removed.(áûÿşùÿÿÿÿ8²çå›-
+\squid:S1197"8Move the array designator from the variable to the type.(ÿ»¹îıÿÿÿÿ8Õµú•›-
+isquid:CommentedOutCodeLine€"<This block of commented-out lines of code should be removed.(áõÁi8Õµú•›-
+jsquid:S2147Û"FCombine this catch with the one at line 1879, which has the same body.(ĞĞ¹óúÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLineê"<This block of commented-out lines of code should be removed.(È¦Ñô8Õµú•›-
+wsquid:S3776ö"SRefactor this method to reduce its Cognitive Complexity from 200 to the 15 allowed.(Û³‡ƒşÿÿÿÿ8Õµú•›-
+jsquid:CommentedOutCodeLineš"<This block of commented-out lines of code should be removed.(ÉŸöÿ8Õµú•›-
+•squid:S1192‘"qDefine a constant instead of duplicating this literal "application/x-www-form-urlencoded; charset=UTF-8" 6 times.(©ìï²úÿÿÿÿ8Õµú•›-
+Wsquid:S1197"8Move the array designator from the variable to the type.(Ù€İ€8Õµú•›-
+Psquid:S1197›"8Move the array designator from the variable to the type.(İ‘ç·
+Gsquid:S1148Ü"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÚÏƒÏ™-
+Wsquid:S1197—"8Move the array designator from the variable to the type.(ü–öé8Õµú•›-
+jsquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(Øù“ˆ8Õµú•›-
+gsquid:S1192º"HDefine a constant instead of duplicating this literal "payInfo" 4 times.(§²©ş8Õµú•›-
+esquid:S1192Œ"HDefine a constant instead of duplicating this literal "pageNum" 4 times.(ÌĞğ•ûÿÿÿÿ
+jsquid:CommentedOutCodeLine‘"<This block of commented-out lines of code should be removed.(îá…¬8Õµú•›-
+Gsquid:S1148´"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¬­Í–›-
+xsquid:S2293È	"YReplace the type specification in this constructor call with the diamond operator ("<>").(Öş¡ì8Õµú•›-
+jsquid:CommentedOutCodeLineù	"<This block of commented-out lines of code should be removed.(Ôå¿»8Õµú•›-
+isquid:S2147±"ECombine this catch with the one at line 429, which has the same body.(âÃƒŠıÿÿÿÿ8Õµú•›-
